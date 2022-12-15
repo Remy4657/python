@@ -1,0 +1,29 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% for item in list_product %}
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-item new-arrival-item">
+                        <a href="{% url 'detail' item.product_name %}">
+                            <div class="new-arrival-img">
+                                <img src="{% static '/shop/img/product_img.png' %}" alt="">
+                            </div>
+                            <div class="new-arrival-info">
+                                <h1 class="new-arrival-name">{{item.product_name}}</h1>
+                                <p class="new-arrival-price">{{item.price}} VNĐ</p>
+                                <div class="details-product animate__animated animate__fadeInUp">
+                                    <a href="{% url 'detail' item.product_name %}">CHI TIẾT</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}               
+        </div>
+    </div>
+{% endblock %}
+
+

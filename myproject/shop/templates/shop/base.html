@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static '/shop/css/style.css' %}">
+    <!-- <link rel="stylesheet" href="/myproject/shop/static/shop/css/style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <header id="header">
+        <div class="top-header container" role="navigation">
+            <!-- Hotline -->
+            <div class="hotline">
+                <p>HOTLINE ĐẶT HÀNG: 09123456789</p>
+            </div>
+            <!-- Menu btn khi màn hình nhỏ -->
+            <div class="menu-btn">
+                <div>
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <p class="mb-0">/LOGO</p>
+            </div>
+            
+            <div class="icon">
+                <div class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="cart-btn">
+                    <i class="fa-solid fa-cart-arrow-down"></i>
+                    <div class="quantity">
+                        <span>0</span>
+                    </div>
+                </div>
+                <div class="user">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Điều hướng -->
+        <div class="nav-links">
+            <li><a href="#">TRANG CHỦ</a></li>
+            <li><a href="#">GIỚI THIỆU</a></li>
+            <li><a href="#">DANH MỤC</a></li>
+            <li><a href="/shop">SẢN PHẨM</a></li>
+            <li><a href="#">TIN TỨC</a></li>
+            <li><a href="#">LIÊN HỆ</a></li>
+        </div>
+        <!-- Form nhập tìm kiếm -->
+        <div class="search-form">
+            <input type="text" placeholder="Tìm kiếm ...">
+            <span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+        <!-- Giỏ hàng -->
+        <div class="cart-form">
+            <div class="cart-list-product">          
+            </div>
+            <div class="payment-section">
+                <div class="payment-total">
+                    <p>Tổng cộng:</p>
+                    <span>----$</span>
+                </div>
+                <div class="payment-btn">
+                    <button class="check-out">THANH TOÁN</button>
+                    <a href="" class="cart-section">GIỎ HÀNG</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="footer">
+        <h1>N18 - Đồ án chuyên ngành</h1>
+        <div>
+            <h3>Nguyễn Văn Đức</h3>
+            <h3>Nguyễn Trọng Đạt</h3>
+            <h3>Nguyễn Văn Hoàng</h3>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{% static '/shop/js/main.js' %}"></script>
+    <!-- <script src="/myproject/shop/static/shop/js/main.js"></script> -->
+</body>
+</html>
